@@ -1,3 +1,4 @@
+.gitignore
 package-list/
 setup-git.sh
 git-up.sh
