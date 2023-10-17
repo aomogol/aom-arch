@@ -20,4 +20,5 @@ sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.ta
 Append (adding to the end of the file) to /etc/pacman.conf:
 
 [chaotic-aur]
+
 Include = /etc/pacman.d/chaotic-mirrorlist
