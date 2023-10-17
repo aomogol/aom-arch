@@ -6,3 +6,7 @@ sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.ta
 #Append (adding to the end of the file) to /etc/pacman.conf:
 #[chaotic-aur]
 #Include = /etc/pacman.d/chaotic-mirrorlist
+
+
+### chaotic AUR install
+#wget -q -O chaotic-AUR-installer.bash https://raw.githubusercontent.com/SharafatKarim/chaotic-AUR-installer/main/install.bash && sudo bash chaotic-AUR-installer.bash && rm chaotic-AUR-installer.bash
