@@ -3,19 +3,9 @@
 ##################################################################################################################
 # Author    :Ahmet Önder Moğol
 ##################################################################################################################
-#tput setaf 0 = black
-#tput setaf 1 = red
-#tput setaf 2 = green
-#tput setaf 3 = yellow
-#tput setaf 4 = dark blue
-#tput setaf 5 = purple
-#tput setaf 6 = cyan
-#tput setaf 7 = gray
-#tput setaf 8 = light blue
 ##################################################################################################################
 installed_dir=$(dirname $(readlink -f $(basename `pwd`)))
 ##################################################################################################################
-
 # https://wiki.hyprland.org/Nvidia/
 # https://community.kde.org/Plasma/Wayland/Nvidia
 echo "################################################################"
@@ -23,15 +13,12 @@ echo "################### Making sure nvidia-dkms is installed or else exit"
 echo "################################################################"
 # Just checking if nvidia-dkms is installed else stop
 if pacman -Qi nvidia-dkms &> /dev/null; then
-
 	tput setaf 2
 	echo "################################################################"
 	echo "#########  Checking ..."$package" is installed... we can continue"
 	echo "################################################################"
 	tput sgr0
-
 else
-
 	tput setaf 1
 	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 	echo "!!!!!!!!!  Nvidia-dkms has NOT been installed"
@@ -39,7 +26,6 @@ else
 	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 	tput sgr0
 	exit 1
-
 fi
 
 echo
