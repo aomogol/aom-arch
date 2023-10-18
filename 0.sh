@@ -15,11 +15,18 @@ sh 80-development.sh
 #sh 81-flutter-set.sh
 sh 90-qemu.sh
 #sh 91-notebook-icin-kurulumlar.sh
+#sh 92-zram.sh
+#sh 99-software-AUR-repo.sh
 
 echo "################################################################"
-echo "################### Personal folder"
+echo "################### Personal Settings"
 echo "################################################################"
 installed_dir=$(dirname $(readlink -f $(basename `pwd`)))
 cd $installed_dir/Personal
 
 sh 900-install-personal-settings-folders.sh
+#sh 910-install-personal-settings-bookmarks.sh
+#sh 920-autostart-applications.sh
+#sh 920-autostart-applications.sh
+#sh 970-all.sh
+#sh 999-skel.sh
