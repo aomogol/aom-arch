@@ -91,6 +91,7 @@ yay -S --noconfirm --needed xorg-xkill
 yay -S --noconfirm --needed zsh
 yay -S --noconfirm --needed zsh-completions
 yay -S --noconfirm --needed zsh-syntax-highlighting
+yay -S --noconfirm --needed zsh-autosuggestions
 
 sudo systemctl enable avahi-daemon.service
 sudo systemctl enable ntpd.service

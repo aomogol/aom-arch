@@ -43,17 +43,52 @@ sudo reflector --latest 10  --fastest 10 --sort rate --protocol http,https --sav
 # echo
 yay -Syyu --noconfirm
 
+#
+# determine processor type and install microcode
+# 
+proc_type=$(lscpu | awk '/Vendor ID:/ {print $3}')
+case "$proc_type" in
+	GenuineIntel)
+		print "Installing Intel microcode"
+		yay -S --needed --noconfirm intel-ucode
+		proc_ucode=intel-ucode.img
+		;;
+	AuthenticAMD)
+		print "Installing AMD microcode"
+		yay -S --needed --noconfirm amd-ucode
+		proc_ucode=amd-ucode.img
+		;;
+esac	
+
 ### chaotic AUR install
 #wget -q -O chaotic-AUR-installer.bash https://raw.githubusercontent.com/SharafatKarim/chaotic-AUR-installer/main/install.bash && sudo bash chaotic-AUR-installer.bash && rm chaotic-AUR-installer.bash
 
 # ------------------------------------------------------
 # Add user to wheel
 # ------------------------------------------------------
-clear
-echo "Uncomment %wheel group in sudoers (around line 85):"
-echo "Before: #%wheel ALL=(ALL:ALL) ALL"
-echo "After:  %wheel ALL=(ALL:ALL) ALL"
-echo ""
-read -p "Open sudoers now?" c
-EDITOR=nano sudo -E visudo
-usermod -aG wheel $username
+#clear
+#echo "Uncomment %wheel group in sudoers (around line 85):"
+#echo "Before: #%wheel ALL=(ALL:ALL) ALL"
+#echo "After:  %wheel ALL=(ALL:ALL) ALL"
+#echo ""
+#read -p "Open sudoers now?" c
+#EDITOR=nano sudo -E visudo
+#usermod -aG wheel $username
+
+#echo "
+###############################################################################
+# Remove no password sudo rights
+###############################################################################
+#"
+# Remove no password sudo rights
+#sed -i 's/^%wheel ALL=(ALL) NOPASSWD: ALL/# %wheel ALL=(ALL) NOPASSWD: ALL/' /etc/sudoers
+# Add sudo rights
+#sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
+
+# Replace in the same state
+#cd $pwd
+#echo "
+###############################################################################
+# Done
+###############################################################################
+#"
