@@ -11,7 +11,8 @@ echo "################################################################"
 #starting on an ArcoLinuxL iso
 #https://wiki.archlinux.org/title/PipeWire#Bluetooth_devices
 #compare
-yay -Rdd --noconfirm gnome-bluetooth blueberry pipeware-media-session
+yay -Rdd --noconfirm gnome-bluetooth 
+yay -Rdd --noconfirm blueberry
 yay -Rdd --noconfirm jack2
 yay -Rdd --noconfirm pulseaudio-alsa
 yay -Rdd --noconfirm pulseaudio-bluetooth
@@ -19,7 +20,7 @@ yay -Rdd --noconfirm pulseaudio
 #yay -R --noconfirm pipewire-pulse
 #yay -R --noconfirm pipewire-alsa
 #yay -Rdd --noconfirm pipewire-jack
-#yay -R --noconfirm pipewire-media-session
+yay -R --noconfirm pipewire-media-session
 #yay -R --noconfirm pipewire-zeroconf
 #yay -Rdd --noconfirm pipewire
 #yay -R --noconfirm pipewire-media-session
