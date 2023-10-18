@@ -26,7 +26,8 @@
   sudo systemctl enable NetworkManager
   sudo systemctl start NetworkManager
   sudo systemctl enable sddm
-  sudo systemctl start sddm
+  #sudo systemctl start sddm
 
 echo "################### Plasma related applications installed "
+echo "################### Please REBOOT"
  
