@@ -24,7 +24,8 @@ yay -S --needed --noconfirm czkawka-gui-bin ncdu cutefish
 ###### aksesuar
 yay -S --needed --noconfirm  ocs-url
 #### web browsers
-yay -S --needed --noconfirm firefox chromium google-chrome brave-bin opera thorium-browser-bin
+yay -S --needed --noconfirm firefox chromium google-chrome brave-bin thorium-browser-bin
+#yay -S --needed --noconfirm opera
 #yay -S --noconfirm --needed vivaldi vivaldi-ffmpeg-codecs vivaldi-widevine
 
 ## FTP

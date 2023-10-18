@@ -10,9 +10,10 @@ echo "##########################################################################
 tput sgr0
 echo
 #----------------------------------------------------------------------------------
-yay -S --noconfirm --needed zsh-theme-powerlevel10k-git
 yay -S --noconfirm --needed ttf-meslo-nerd-font-powerlevel10k
 yay -S --noconfirm --needed powerline-fonts
+yay -S --noconfirm --needed zsh-theme-powerlevel10k-git
+
 
 zshPath="/home/"$USER"/.zshrc"
 xresourcesPath="/home/"$USER"/.Xresources"
