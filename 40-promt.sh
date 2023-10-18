@@ -24,8 +24,8 @@ echo "Beware that we add a line to your personal ~/.zshrc file at the bottom"
 echo "######################################################################################"
 tput sgr0
 echo
-echo '
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' | sudo tee --append $zshPath
+#echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' | sudo tee --append $zshPath
+echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 echo
 
 echo "######################################################################################"
@@ -35,7 +35,7 @@ echo
 
 FIND='ZSH_THEME="random"'
 
-REPLACE='#ZSH_THEME="random"'
+REPLACE='#ZSH_THEME="agnoster"'
 
 sed -i "s/$FIND/$REPLACE/g" $zshPath
 
@@ -73,11 +73,13 @@ echo "Switch to ZSH with our alias called 'tozsh'"
 echo "######################################################################################"
 tput sgr0
 
+### Switch to ZSH 
+#sudo chsh $USER -s /bin/zsh
+sudo usermod -s /bin/zsh $USER
+
 tput setaf 2
 echo "######################################################################################"
 echo "ZSH Powerlevel10k has been installed"
 echo "######################################################################################"
 tput sgr0
-
-
 

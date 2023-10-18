@@ -21,7 +21,7 @@ makepkg -si
 cd ..
 sudo rm -r yay-bin
 
-yay -S --needed --noconfirm chromium neofetch wget terminator reflector nano
+yay -S --needed --noconfirm neofetch reflector nano
 
 ##################################################################################################################
 # echo "Deleting current /etc/pacman.d/mirrorlist and replacing with"
@@ -94,4 +94,4 @@ esac
 #"
 
 ## Kullanıcı için grup atamaları
-sudo usermod -aG wheel,users,power,lp,adm,audio,video,optical,storage,network,rfkill $USER
+#sudo usermod -aG wheel,users,power,lp,adm,audio,video,optical,storage,network,rfkill $USER

@@ -31,9 +31,9 @@ echo
 #[ -d $HOME"/.config/variety" ] || mkdir -p $HOME"/.config/variety"
 #[ -d $HOME"/.config/fish" ] || mkdir -p $HOME"/.config/fish"
 [ -d $HOME"/.config/neofetch" ] || mkdir -p $HOME"/.config/neofetch"
-[ -d $HOME"/DATA" ] || mkdir -p $HOME"/DATA"
+#[ -d $HOME"/Data" ] || mkdir -p $HOME"/Data"
 #[ -d $HOME"/Insync" ] || mkdir -p $HOME"/Insync"
-[ -d $HOME"/Projects" ] || mkdir -p $HOME"/Projects"
+#[ -d $HOME"/Projects" ] || mkdir -p $HOME"/Projects"
 
 echo
 echo "################################################################"
@@ -45,11 +45,13 @@ echo
 [ -d $HOME"/.config/sublime-text/Packages/User" ] || mkdir -p $HOME"/.config/sublime-text/Packages/User"
 cp  $installed_dir/settings/sublimetext/Preferences.sublime-settings $HOME/.config/sublime-text/Packages/User/Preferences.sublime-settings
 echo
+
 echo
 echo "Blueberry symbolic link"
 echo
 #uncommenting so that we see the bluetooth icon in our toolbars
-gsettings set org.blueberry use-symbolic-icons false
+#gsettings set org.blueberry use-symbolic-icons false
+
 
 if grep -q "Arch Linux" /etc/os-release; then
 	echo
@@ -69,7 +71,7 @@ if grep -q "Arch Linux" /etc/os-release; then
 	cp $installed_dir/settings/shell-personal/.zshrc ~/.zshrc
 	sudo cp -f $installed_dir/settings/shell-personal/.zshrc /etc/skel/.zshrc
 	cp $installed_dir/settings/shell-personal/.zshrc-personal ~/.zshrc-personal
-	cp $installed_dir/settings/fish/alias.fish ~/.config/fish/alias.fish
+	#cp $installed_dir/settings/fish/alias.fish ~/.config/fish/alias.fish
 	echo
 
 
@@ -96,6 +98,7 @@ if grep -q "Arch Linux" /etc/os-release; then
 	[ -d /etc/skel/.config/Thunar ] || sudo mkdir -p /etc/skel/.config/Thunar
 	sudo cp  $installed_dir/settings/thunar/uca.xml /etc/skel/.config/Thunar
 	echo
+
 
 fi
 

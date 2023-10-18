@@ -27,6 +27,5 @@ cd $installed_dir/Personal
 sh 900-install-personal-settings-folders.sh
 #sh 910-install-personal-settings-bookmarks.sh
 #sh 920-autostart-applications.sh
-#sh 920-autostart-applications.sh
-#sh 970-all.sh
+sh 970-all.sh
 #sh 999-skel.sh

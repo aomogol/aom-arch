@@ -13,16 +13,16 @@ export ZSH=/usr/share/oh-my-zsh/
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # if you installed the package oh-my-zsh-powerline-theme-git then you type here "powerline" as zsh theme
-ZSH_THEME="random"
+ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
 # If set to an empty array, this variable will have no effect.
 
-ZSH_THEME_RANDOM_CANDIDATES=( "agnoster" "darkblood" "duellj" "fox" "funky" "humza" "jonathan" "junkfood" "kiwi" "rkj-repos" "simonoff")
+#ZSH_THEME_RANDOM_CANDIDATES=( "agnoster" "darkblood" "duellj" "fox" "funky" "humza" "jonathan" "junkfood" "kiwi" "rkj-repos" "simonoff")
 
-ZSH_THEME_RANDOM_IGNORED=( kardan minimal pygmalion tjkirch_mod)
+#ZSH_THEME_RANDOM_IGNORED=( kardan minimal pygmalion tjkirch_mod)
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -160,12 +160,12 @@ alias fgrep='fgrep --color=auto'
 alias df='df -h'
 
 #keyboard
-alias give-me-azerty-be="sudo localectl set-x11-keymap be"
+alias give-me-trq="sudo localectl set-x11-keymap trq"
 alias give-me-qwerty-us="sudo localectl set-x11-keymap us"
 
 #setlocale
 alias setlocale="sudo localectl set-locale LANG=en_US.UTF-8"
-alias setlocales="sudo localectl set-x11-keymap be && sudo localectl set-locale LANG=en_US.UTF-8"
+alias setlocales="sudo localectl set-x11-keymap trq && sudo localectl set-locale LANG=en_US.UTF-8"
 
 #pacman unlock
 alias unlock="sudo rm /var/lib/pacman/db.lck"

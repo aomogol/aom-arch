@@ -22,6 +22,7 @@
   yay -S --noconfirm --needed okular packagekit-qt5 print-manager 
   yay -S --noconfirm --needed xdg-desktop-portal xdg-desktop-portal-kde
   yay -S --noconfirm --needed discover
+  yay -S --noconfirm --needed kate
 
   sudo systemctl enable NetworkManager
   sudo systemctl start NetworkManager
