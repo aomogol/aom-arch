@@ -29,7 +29,7 @@ yay -S --noconfirm --needed gnome-disk-utility
 yay -S --noconfirm --needed gparted
 yay -S --noconfirm --needed grub-customizer
 yay -S --noconfirm --needed gtop
-yay -S --noconfirm --needed gvfs-smb
+yay -S --noconfirm --needed gvfs gvfs-smb
 yay -S --noconfirm --needed hddtemp
 yay -S --noconfirm --needed htop
 yay -S --noconfirm --needed hw-probe
@@ -85,7 +85,8 @@ yay -S --noconfirm --needed vlc
 yay -S --noconfirm --needed wd719x-firmware
 yay -S --noconfirm --needed wget
 yay -S --noconfirm --needed xcolor
-yay -S --noconfirm --needed xdg-user-dirs
+yay -S --noconfirm --needed xdg-user-dirs 
+yay -S --noconfirm --needed xdg-utils
 yay -S --noconfirm --needed xorg-xkill
 yay -S --noconfirm --needed zsh
 yay -S --noconfirm --needed zsh-completions
@@ -105,6 +106,7 @@ yay -S --noconfirm --needed unrar unarchiver
 yay -S --noconfirm --needed unzip
 yay -S --noconfirm --needed exfatprogs
 yay -S --noconfirm --needed ntfs-3g
+yay -S --noconfirm --needed nfs-utils 
 #yay -S --noconfirm --needed evince
 #yay -S --noconfirm --needed expac
 #yay -S --noconfirm --needed feh

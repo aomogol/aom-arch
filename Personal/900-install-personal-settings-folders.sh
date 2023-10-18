@@ -62,7 +62,9 @@ if grep -q "Arch Linux" /etc/os-release; then
 
 	echo "Installing all shell files"
 	echo
-	
+
+	cp $installed_dir/settings/shell-personal/.bashrc ~/.bashrc
+	sudo cp -f $installed_dir/settings/shell-personal/.bashrc /etc/skel/.bashrc
 	cp $installed_dir/settings/shell-personal/.bashrc-personal ~/.bashrc-personal
 	cp $installed_dir/settings/shell-personal/.zshrc ~/.zshrc
 	sudo cp -f $installed_dir/settings/shell-personal/.zshrc /etc/skel/.zshrc

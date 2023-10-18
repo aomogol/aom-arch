@@ -21,7 +21,7 @@ makepkg -si
 cd ..
 sudo rm -r yay-bin
 
-yay -S --needed --noconfirm chromium neofetch wget terminator reflector
+yay -S --needed --noconfirm chromium neofetch wget terminator reflector nano
 
 ##################################################################################################################
 # echo "Deleting current /etc/pacman.d/mirrorlist and replacing with"
@@ -45,3 +45,15 @@ yay -Syyu --noconfirm
 
 ### chaotic AUR install
 #wget -q -O chaotic-AUR-installer.bash https://raw.githubusercontent.com/SharafatKarim/chaotic-AUR-installer/main/install.bash && sudo bash chaotic-AUR-installer.bash && rm chaotic-AUR-installer.bash
+
+# ------------------------------------------------------
+# Add user to wheel
+# ------------------------------------------------------
+clear
+echo "Uncomment %wheel group in sudoers (around line 85):"
+echo "Before: #%wheel ALL=(ALL:ALL) ALL"
+echo "After:  %wheel ALL=(ALL:ALL) ALL"
+echo ""
+read -p "Open sudoers now?" c
+EDITOR=nano sudo -E visudo
+usermod -aG wheel $username
