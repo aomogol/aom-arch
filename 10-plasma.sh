@@ -7,6 +7,7 @@
   echo "################### Plasma related applications"
   echo "################################################################"
   yay -Syyu
+  yay -R --noconfirm sddm sddm-kcm
   yay -S --noconfirm --needed sddm-git sddm-kcm
   yay -S --noconfirm --needed plasma-desktop 
   yay -S --noconfirm --needed plasma-nm plasma-pa
@@ -20,6 +21,7 @@
   yay -S --noconfirm --needed kdialog kmix kolourpaint kontrast
   yay -S --noconfirm --needed okular packagekit-qt5 print-manager 
   yay -S --noconfirm --needed xdg-desktop-portal xdg-desktop-portal-kde
+  yay -S --noconfirm --needed discover
 
   sudo systemctl enable NetworkManager
   sudo systemctl start NetworkManager

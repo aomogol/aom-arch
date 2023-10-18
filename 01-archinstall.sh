@@ -92,3 +92,6 @@ esac
 # Done
 ###############################################################################
 #"
+
+## Kullanıcı için grup atamaları
+sudo usermod -aG wheel,users,power,lp,adm,audio,video,optical,storage,network,rfkill $USER
