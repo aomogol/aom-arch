@@ -38,6 +38,13 @@ ttf-hack
 ttf-roboto 
 ttf-ubuntu-font-family 
 ttf-ms-fonts
+ttf-bitstream-vera
+ttf-dejavu
+ttf-droid
+ttf-hack
+ttf-inconsolata
+ttf-liberation
+ttf-roboto-mono
 )
 
 count=0

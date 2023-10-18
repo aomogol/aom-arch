@@ -4,13 +4,13 @@
 # Author    : Ahmet Önder Moğol
 ##################################################################################################################
 sh 01-archinstall.sh
+sh 02-pipewire.sh
+sh 03-cups-bluetooth.sh
+sh 04-fonts.sh
 sh 10-plasma.sh
+sh 11-promt.sh
 sh 20-core-software.sh
 sh 30-aom.sh
-sh 40-promt.sh
-sh 50-fonts.sh
-sh 60-cups-bluetooth.sh
-sh 70-pipewire.sh
 sh 80-development.sh
 #sh 81-flutter-set.sh
 sh 90-qemu.sh

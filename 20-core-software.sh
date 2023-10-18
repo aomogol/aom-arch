@@ -70,15 +70,6 @@ yay -S --noconfirm --needed the_platinum_searcher-bin
 yay -S --noconfirm --needed the_silver_searcher
 yay -S --noconfirm --needed time
 yay -S --noconfirm --needed tree
-yay -S --noconfirm --needed ttf-bitstream-vera
-yay -S --noconfirm --needed ttf-dejavu
-yay -S --noconfirm --needed ttf-droid
-yay -S --noconfirm --needed ttf-hack
-yay -S --noconfirm --needed ttf-inconsolata
-yay -S --noconfirm --needed ttf-liberation
-yay -S --noconfirm --needed ttf-roboto
-yay -S --noconfirm --needed ttf-roboto-mono
-yay -S --noconfirm --needed ttf-ubuntu-font-family
 yay -S --noconfirm --needed upd72020x-fw
 yay -S --noconfirm --needed visual-studio-code-bin
 yay -S --noconfirm --needed vlc

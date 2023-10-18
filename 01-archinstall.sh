@@ -22,6 +22,8 @@ cd ..
 sudo rm -r yay-bin
 
 yay -S --needed --noconfirm neofetch reflector nano
+yay -S --noconfirm --needed xdg-user-dirs 
+yay -S --noconfirm --needed xdg-utils
 
 ##################################################################################################################
 # echo "Deleting current /etc/pacman.d/mirrorlist and replacing with"
