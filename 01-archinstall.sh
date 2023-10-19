@@ -21,14 +21,26 @@ makepkg -si
 cd ..
 sudo rm -r yay-bin
 
-yay -S --needed --noconfirm neofetch reflector nano
+yay -S --noconfirm --needed neofetch reflector nano
 yay -S --noconfirm --needed xdg-user-dirs 
 yay -S --noconfirm --needed xdg-utils
+yay -S --noconfirm --needed xorg-xkill
+yay -S --noconfirm --needed xcolor
+yay -S --noconfirm --needed rate-mirrors-bin
+
+##################################################################################################################
+# echo "rate-mirror "
+export TMPFILE="$(mktemp)"; \
+    sudo true; \
+    rate-mirrors --save=$TMPFILE arch --max-delay=43200 \
+      && sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist-backup \
+      && sudo mv $TMPFILE /etc/pacman.d/mirrorlist
+##################################################################################################################
 
 ##################################################################################################################
 # echo "Deleting current /etc/pacman.d/mirrorlist and replacing with"
 # echo
-sudo reflector --latest 10  --fastest 10 --sort rate --protocol http,https --save /etc/pacman.d/mirrorlist
+# sudo reflector --latest 10  --fastest 10 --sort rate --protocol http,https --save /etc/pacman.d/mirrorlist
 # echo "Server = https://mirror.osbeck.com/archlinux/\$repo/os/\$arch
 # Server = http://mirror.osbeck.com/archlinux/\$repo/os/\$arch
 # Server = https://geo.mirror.pkgbuild.com/\$repo/os/\$arch
@@ -65,17 +77,25 @@ esac
 ### chaotic AUR install
 #wget -q -O chaotic-AUR-installer.bash https://raw.githubusercontent.com/SharafatKarim/chaotic-AUR-installer/main/install.bash && sudo bash chaotic-AUR-installer.bash && rm chaotic-AUR-installer.bash
 
-# ------------------------------------------------------
+echo "
+###############################################################################
 # Add user to wheel
-# ------------------------------------------------------
+###############################################################################
+#"
 #clear
-#echo "Uncomment %wheel group in sudoers (around line 85):"
-#echo "Before: #%wheel ALL=(ALL:ALL) ALL"
-#echo "After:  %wheel ALL=(ALL:ALL) ALL"
-#echo ""
+echo "Uncomment %wheel group in sudoers (around line 85):"
+echo "Before: #%wheel ALL=(ALL:ALL) ALL"
+echo "After:  %wheel ALL=(ALL:ALL) ALL"
+echo ""
 #read -p "Open sudoers now?" c
-#EDITOR=nano sudo -E visudo
-#usermod -aG wheel $username
+EDITOR=nano sudo -E visudo
+sudo usermod -aG wheel $USER
+
+echo "
+###############################################################################
+# Done
+###############################################################################
+#"
 
 #echo "
 ###############################################################################

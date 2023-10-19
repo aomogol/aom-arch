@@ -52,6 +52,19 @@ echo
 #uncommenting so that we see the bluetooth icon in our toolbars
 #gsettings set org.blueberry use-symbolic-icons false
 
+tput setaf 3
+echo "######################################################################################"
+echo "This package has been created for ZSH"
+echo "Switch to ZSH with our alias called 'tozsh'"
+echo "######################################################################################"
+tput sgr0
+
+### Switch to ZSH 
+#sudo chsh $USER -s /bin/zsh
+sudo usermod -s /bin/zsh $USER
+echo "######################################################################################"
+echo "Pls. REBOOT"
+echo "######################################################################################"
 
 if grep -q "Arch Linux" /etc/os-release; then
 	echo
@@ -64,16 +77,14 @@ if grep -q "Arch Linux" /etc/os-release; then
 
 	echo "Installing all shell files"
 	echo
-
 	cp $installed_dir/settings/shell-personal/.bashrc ~/.bashrc
-	sudo cp -f $installed_dir/settings/shell-personal/.bashrc /etc/skel/.bashrc
 	cp $installed_dir/settings/shell-personal/.bashrc-personal ~/.bashrc-personal
 	cp $installed_dir/settings/shell-personal/.zshrc ~/.zshrc
-	sudo cp -f $installed_dir/settings/shell-personal/.zshrc /etc/skel/.zshrc
 	cp $installed_dir/settings/shell-personal/.zshrc-personal ~/.zshrc-personal
 	#cp $installed_dir/settings/fish/alias.fish ~/.config/fish/alias.fish
+	sudo cp -f $installed_dir/settings/shell-personal/.bashrc /etc/skel/.bashrc
+	sudo cp -f $installed_dir/settings/shell-personal/.zshrc /etc/skel/.zshrc
 	echo
-
 
 	echo "To personal Kvantum setup"
 	echo
@@ -98,7 +109,6 @@ if grep -q "Arch Linux" /etc/os-release; then
 	[ -d /etc/skel/.config/Thunar ] || sudo mkdir -p /etc/skel/.config/Thunar
 	sudo cp  $installed_dir/settings/thunar/uca.xml /etc/skel/.config/Thunar
 	echo
-
 
 fi
 

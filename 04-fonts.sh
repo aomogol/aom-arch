@@ -45,6 +45,9 @@ ttf-hack
 ttf-inconsolata
 ttf-liberation
 ttf-roboto-mono
+noto-fonts
+adobe-source-sans-fonts
+awesome-terminal-fonts
 )
 
 count=0

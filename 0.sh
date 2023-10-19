@@ -14,8 +14,8 @@ sh 30-aom.sh
 sh 80-development.sh
 #sh 81-flutter-set.sh
 sh 90-qemu.sh
-#sh 91-notebook-icin-kurulumlar.sh
-#sh 92-zram.sh
+sh 91-notebook-icin-kurulumlar.sh
+sh 92-zram.sh
 #sh 99-software-AUR-repo.sh
 
 echo "################################################################"

@@ -41,7 +41,7 @@ done
 # -----------------------------------------------------
 # Install zram
 # -----------------------------------------------------
-yay --noconfirm -S zram-generator
+yay -S --noconfirm --needed zram-generator
 
 # -----------------------------------------------------
 # Open zram-generator.conf
