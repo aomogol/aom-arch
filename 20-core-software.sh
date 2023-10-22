@@ -25,7 +25,7 @@ yay -S --noconfirm --needed downgrade
 yay -S --noconfirm --needed font-manager
 #yay -S --noconfirm --needed git
 yay -S --noconfirm --needed gnome-disk-utility
-yay -S --noconfirm --needed gparted
+yay -S --noconfirm --needed gparted gpart
 yay -S --noconfirm --needed grub-customizer
 yay -S --noconfirm --needed gtop
 yay -S --noconfirm --needed gvfs 
