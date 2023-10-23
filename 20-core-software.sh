@@ -59,7 +59,7 @@ yay -S --noconfirm --needed python-pywal
 #yay -S --noconfirm --needed qbittorrent
 #yay -S --noconfirm --needed rate-mirrors-bin
 yay -S --noconfirm --needed ripgrep
-yay -S --noconfirm --needed rsync
+yay -S --noconfirm --needed rsync rclone fuse3  # fuse3 :for rclone mount
 yay -S --noconfirm --needed samba
 #yay -S --noconfirm --needed spotify
 yay -S --noconfirm --needed squashfs-tools
